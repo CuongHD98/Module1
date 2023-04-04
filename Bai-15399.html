@@ -6,13 +6,41 @@
 </head>
 <body>
 <form>
-  <input type="number">
-  <input type="number">
-  <button>Cộng</button>
-  <button>Trừ</button>
-  <button>Nhân</button>
-  <button>Chia</button>
-  <h4>Result</h4>
+  <input type="number" id="nb1" placeholder="Nhập số thứ 1" value="">
+  <input type="number" id="nb2" placeholder="Nhập số thứ 2" value="">
+  <button id="Addition" onclick="myFunction()">Cộng</button>
+  <button id="Subtraction" onclick="myFunction()">Trừ</button>
+  <button id="Multiplication" onclick="myFunction()">Nhân</button>
+  <button id="Division" onclick="myFunction()">Chia</button>
+  <h3 id="demo"></h3>
+  <p>Đây là kết quả !</p>
 </form>
 </body>
 </html>
+<script>
+    function myFunction(){
+        let number1;
+        let number2;
+        number1 = document.getElementById("nb1").value;
+        number2 = document.getElementById("nb2").value;
+        let inputAddition; let Addition = parseInt(inputAddition);
+        let inputSubtraction; let Subtraction = parseInt(inputSubtraction);
+        let inputMultiplication; let Multiplication = parseInt(inputMultiplication);
+        let inputDivision; let Division = parseInt(inputDivision);
+        Addition = number1 + number2;
+        Subtraction = number1 - number2;
+        Multiplication = number1 * number2;
+        Division = number1 / number2;
+        document.getElementById("demo").innerHTML =
+            "Result = " + Addition ;
+        document.getElementById("demo").innerHTML =
+            "Result = " + Subtraction ;
+        document.getElementById("demo").innerHTML =
+            "Result = " + Multiplication ;
+        document.getElementById("demo").innerHTML =
+            "Result = " + Division ;
+
+
+    }
+
+</script>
