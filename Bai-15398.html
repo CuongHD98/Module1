@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15398</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Amount" value=""></td>
+        <td><select id="sl1">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select></td>
+        <td><select id="sl2">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td><button onclick="myFunction()">Convert</button></td>
+    </tr>
+
+</table>
+<p id="demo"></p>
+</body>
+</html>
+<script>
+    function myFunction() {
+        let Amount;
+        let FromCurrency;
+        let ToCurrency;
+        let Result;
+        Amount = document.getElementById("Amount").value;
+        FromCurrency = document.getElementById("sl1").value;
+        ToCurrency = document.getElementById("sl2").value;
+        if (FromCurrency == "VND" && ToCurrency == "VND") {
+            Result = Amount;
+            document.getElementById("demo").innerHTML =
+                "Result: " + Result + "VND";
+        } else if (FromCurrency == "USD" && ToCurrency == "USD") {
+            Result = Amount;
+            document.getElementById("demo").innerHTML =
+                "Result: " + Result + "$";
+        } else if (FromCurrency == "VND" && ToCurrency == "USD") {
+            Result = Amount * 0.000043;
+            document.getElementById("demo").innerHTML =
+                "Result: " + Result + "$";
+        } else {
+            Result = Amount * 23.485;
+            document.getElementById("demo").innerHTML =
+                "Result: " + Result + "VND";
+        }
+    }
+
+</script>
