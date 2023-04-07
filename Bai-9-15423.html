@@ -6,19 +6,49 @@
 </head>
 <body>
 
-  <input type="image" id="img1" src="image/1/11.png" style="width: 30%" onclick="changImage()"><br>
-  <input type="image" id="img2" src="image/2/12.png" style="width: 30%" onclick="changImage()">
+<input type="image" id="img1" src="/image/1/11.png" style="width: 30%" onclick="changeImage1()"><br>
+<input type="image" id="img2" src="/image/2/12.png" style="width: 30%" onclick="changeImage2()">
 
 </body>
 </html>
 <script>
-  let change1 = document.getElementById("img1").src;
-  let change2 = document.getElementById("img2").src;
-  function changImage(){
-    change1 = document.getElementById("img1").src="image/1/21.png";
-    return;
-    change1 = document.getElementById("img1").src="image/1/31.png";
+    let change1 = document.getElementById("img1");
+    let change2 = document.getElementById("img2");
+    const anh11 = "/image/1/11.png";
+    const anh21 = "/image/1/21.png";
+    const anh31 = "/image/1/31.png";
 
-  }
+    const anh12 = "/image/2/12.png";
+    const anh22 = "/image/2/22.png";
+    const anh32 = "/image/2/32.png";
+
+    let count1 = 1;
+    let count2 = 1;
+    function changeImage1() {
+        if (count1 === 1) {
+            change1.src = anh21;
+            count1++
+        } else if (count1 === 2) {
+            change1.src = anh31;
+            count1++
+        } else {
+            change1.src = anh11;
+            count1 = 1;
+        }
+
+    }
+    function changeImage2(){
+        if (count2 === 1) {
+            change2.src = anh22;
+            count2++
+        } else if (count2 === 2) {
+            change2.src = anh32;
+            count2++
+        } else {
+            change2.src = anh12;
+            count2 = 1;
+        }
+    }
+
 
 </script>
