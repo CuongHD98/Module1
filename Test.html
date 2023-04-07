@@ -13,37 +13,21 @@
   </style>
 </head>
 <body>
-<input type="text" id="view"><br><br>
-<div class="thang">
-  <table>
-    <tbody><tr>
-      <td><button type="button" name="btn" value="1" onclick="inputValue(this.value)"> 1 </button></td>
-      <td><button type="button" name="btn" value="2" onclick="inputValue(this.value)"> 2 </button></td>
-      <td><button type="button" name="btn" value="3" onclick="inputValue(this.value)"> 3 </button></td>
-      <td><button type="button" name="op" value="+" onclick="inputValue(this.value)"> + </button></td>
-    </tr>
-
-    <tr>
-      <td><button type="button" name="btn" value="4" onclick="inputValue(this.value)"> 4 </button></td>
-      <td><button type="button" name="btn" value="5" onclick="inputValue(this.value)"> 5 </button></td>
-      <td><button type="button" name="btn" value="6" onclick="inputValue(this.value)"> 6 </button></td>
-      <td><button type="button" name="op" value="-" onclick="inputValue(this.value)"> - </button></td>
-    </tr>
-    <tr>
-      <td><button type="button" name="btn" value="7" onclick="inputValue(this.value)"> 7 </button></td>
-      <td><button type="button" name="btn" value="8" onclick="inputValue(this.value)"> 8 </button></td>
-      <td><button type="button" name="btn" value="9" onclick="inputValue(this.value)"> 9</button></td>
-      <td><button type="button" name="op" value="*" onclick="inputValue(this.value)"> * </button></td>
-    </tr>
-    <tr>
-      <td><button type="button" onclick="xoa();"> AC </button></td>
-      <td><button type="button" name="btn" onclick="inputValue(this.value)"> 0 </button></td>
-      <td><button name="reusult" onclick="result();"> = </button></td>
-      <td><button type="button" name="op" value="/" onclick="inputValue(this.value)"> / </button></td>
-    </tr>
-    </tbody></table>
-
-</div>
+<table>
+  <tr>
+    <td style="width: 150px"><button onclick="goodFunc()" style="width: 100px">GOOD</button></td>
+    <td id="good" style="background-color: white; width: 50px "></td>
+  </tr>
+  <tr>
+    <td style="width: 150px"><button onclick="fastFunc()" style="width: 100px">FAST</button></td>
+    <td id="fast" style="background-color: white; width: 50px "></td>
+  </tr>
+  <tr>
+    <td style="width: 150px"><button onclick="cheapFunc()" style="width: 100px">CHEAP</button></td>
+    <td id="cheap" style="background-color: white; width: 50px "></td>
+  </tr>
+</table>
+<table>
 </body>
 </html>
 <script>
