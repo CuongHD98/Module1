@@ -4,12 +4,48 @@
     <meta charset="UTF-8">
     <title>15419</title>
 </head>
-<body>
-<img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/hinh-anh-doremon.jpg" style="position: absolute" height="200"; width="120">
+<body onload="docReady()">
+<img id="doremon" src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/hinh-anh-doremon.jpg" style="position: absolute;left: 0;top: 0" height="200"; width="120">
 
 </body>
 </html>
 <script>
+    function upArrowPressed() {
+        let element = document.getElementById("doremon");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+    function downArrowPressed() {
+        var element = document.getElementById("doremon");
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+    function leftArrowPressed() {
+        var element = document.getElementById("doremon");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+    function rightArrowPressed() {
+        var element = document.getElementById("doremon");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
 
     
 </script>
