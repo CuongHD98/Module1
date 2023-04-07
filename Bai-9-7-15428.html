@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7-15428</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = +prompt('Nhap tham so a cua PT ax^2 + bx +c');
+    let b = +prompt('Nhap tham so a cua PT ax^2 + bx +c');
+    let c = +prompt('Nhap tham so a cua PT ax^2 + bx +c');
+    let x;
+    if(a==0){
+        if(b==0){
+            if(c==0) alert('PT co vo so nghiem!');
+            else alert('PT vo nghiem!');
+        }else {
+            x = -c/b;
+            alert('PT co nghiem= '+x);
+        }
+    }else {
+        let delta = b*b-4*a*c;
+        if (delta<0) alert('PT vo nghiem!');
+        else if (delta==0){
+            x=-b/(2*a);
+            alert('PT co nghiem x1=x2= '+x);
+        }else {
+            let x1,x2;
+            x1= (-b+Math.sqrt(delta))/(2*a);
+            x2= (-b-Math.sqrt(delta))/(2*a);
+            alert('PT co hai nghiem x1= '+x1+' x2= '+x2);
+        }
+    }
+</script>

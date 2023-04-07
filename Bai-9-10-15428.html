@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-15428</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let dien = +prompt('Nhap so dien: ');
+    let bac1 = 1678;
+    let bac2 = 1734;
+    let bac3 = 2014;
+    let bac4 = 2536;
+    let bac5 = 2834;
+    let bac6 = 2927;
+    let tiendien;
+    if (dien <= 0) alert('Ban nhap sai so dien!')
+    else if (dien <= 50){
+        tiendien = dien * bac1;
+    }else if (dien <= 100){
+        tiendien = bac1*50+(dien-50)*bac2;
+    }else if (dien <= 200){
+        tiendien = bac1*50+bac2*50+(dien-100)*bac3;
+    }else if (dien <= 300){
+        tiendien = bac1*50+bac2*50+bac3*100+(dien-200)*bac4;
+    }else if (dien <= 400){
+        tiendien = bac1*50+bac2*50+bac3*100+bac4*100+(dien-300)*bac5;
+    }else tiendien = bac1*50+bac2*50+bac3*100+bac4*100+bac5*100+(dien-400)*bac6;
+    tiendien = tiendien*110/100;
+    alert('Tien dien thang nay cua ban la: '+tiendien+' VND');
+</script>

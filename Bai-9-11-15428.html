@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-15428</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let tongluong = +prompt('Nhap tong tien luong: ');
+    let mienthue = +prompt('Nhap tong tien duoc mien thue: ');
+    let giamtru = +prompt('Nhap tong tien duoc giam tru: ');
+    let chiuthue = tongluong - mienthue;
+    let tinhthue = chiuthue - giamtru;
+    let TNCN;
+    if (tinhthue<=5000000){
+        TNCN = tinhthue*5/100;
+    }else if (tinhthue<=10000000){
+        TNCN = tinhthue*10/100-250000;
+    }else if (tinhthue<=18000000){
+        TNCN = tinhthue*15/100-750000;
+    }else if (tinhthue<=32000000){
+        TNCN = tinhthue*20/100-1650000;
+    }else if (tinhthue<=52000000){
+        TNCN = tinhthue*25/100-3250000;
+    }else if (tinhthue<=80000000){
+        TNCN = tinhthue*30/100-5850000;
+    }else TNCN = tinhthue*35/100-9850000;
+    alert('Thue thu nhap ca nhan cua ban thang nay la: '+TNCN+' VND');
+</script>
