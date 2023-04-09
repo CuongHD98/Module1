@@ -2,67 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>15422</title>
+    <title>Title</title>
     <style>
-        tr{
-            text-align: center;
+        button{
             width: 100px;
             height: 100px;
         }
-        td{
-            text-align: center;
-            width: 100px;
-            height: 100px;
+        input{
+            width: 100%;
+            height: 80px;
+            font-size: 30px;
         }
-        button {
-            width: 100px;
-            height: 100px;
-            font-size: 24px;
-        }
-
     </style>
 </head>
 <body>
 <table>
     <tr>
-        <td colspan="4"><input type="text" id="result" style="width:100%;height: 50px;font-size: 24px;text-align: right"></td>
+        <th colspan="4"><input id="display"></th>
     </tr>
     <tr>
-        <td><button type="button" name="number" value="1" onclick="inputValue(this.value)">1</button></td>
-        <td><button type="button" name="number" value="2" onclick="inputValue(this.value)">2</button></td>
-        <td><button type="button" name="number" value="3" onclick="inputValue(this.value)">3</button></td>
-        <td><button type="button" id="addition" value="+" onclick="inputValue(this.value)">+</button></td>
-
+        <td><button onclick="number(7)">7</button></td>
+        <td><button onclick="number(8)">8</button></td>
+        <td><button onclick="number(9)">9</button></td>
+        <td><button onclick="clear()">AC</button></td>
     </tr>
     <tr>
-        <td><button type="button" name="number" value="4" onclick="inputValue(this.value)">4</button></td>
-        <td><button type="button" name="number" value="5" onclick="inputValue(this.value)">5</button></td>
-        <td><button type="button" name="number" value="6" onclick="inputValue(this.value)">6</button></td>
-        <td><button type="button" id="subtraction" value="-" onclick="inputValue(this.value)">-</button></td>
+        <td><button onclick="number(4)">4</button></td>
+        <td><button onclick="number(5)">5</button></td>
+        <td><button onclick="number(6)">6</button></td>
+        <td><button onclick="number('/')">/</button></td>
     </tr>
     <tr>
-        <td><button type="button" name="number" value="7" onclick="inputValue(this.value)">7</button></td>
-        <td><button type="button" name="number" value="8" onclick="inputValue(this.value)">8</button></td>
-        <td><button type="button" name="number" value="9" onclick="inputValue(this.value)">9</button></td>
-        <td><button type="button" id="mutiplication" value="*" onclick="inputValue(this.value)">x</button></td>
+        <td><button onclick="number(1)">1</button></td>
+        <td><button onclick="number(2)">2</button></td>
+        <td><button onclick="number(3)">3</button></td>
+        <td><button onclick="number('*')">x</button></td>
     </tr>
     <tr>
-        <td><button type="button" id="clear" onclick="reset()">C</button></td>
-        <td><button type="button" name="number" value="0" onclick="inputValue(this.value)">0</button></td>
-        <td><button type="button" id="run" onclick="run()">=</button></td>
-        <td><button type="button" id="division" value="/" onclick="inputValue(this.value)">/</button></td>
+        <td><button onclick="number(0)">0</button></td>
+        <td><button onclick="result()">=</button></td>
+        <td><button onclick="number('+')">+</button></td>
+        <td><button onclick="number('-')">-</button></td>
     </tr>
 </table>
 </body>
 </html>
+
+
 <script>
-    let result = document.getElementById("result");
-    function inputValue(value){
-        result.value += value;
+
+    function clear() {
+        let display = document.getElementById("display");
+        display.value = "";
     }
-    function reset(){
-        result.value = "";
+
+    function number(so) {
+        let display = document.getElementById("display");
+        display.value = display.value + so;
     }
+
+    function result() {
+        let display = document.getElementById("display");
+        let valueB = display.value;
+        display.value = eval(valueB);
+    }
+
 
 </script>
 
