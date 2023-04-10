@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8-15455</title>
+</head>
+<body>
+<button id="play" onclick="guess()">CHOI</button>
+
+
+</body>
+</html>
+<script>
+    function guess(){
+        let a = parseInt(prompt('Nhập số bé của khoảng= '));
+        let b = parseInt(prompt('Nhập số lớn của khoảng= '));
+        let check = parseInt(prompt('Nhập số bạn đoán: '));
+        let c = b - a + 1; //so chu so trong khoang
+        let random = Math.floor(Math.random() * c) + a;
+        console.log(random);
+        let count = 0;
+        if (check == random) alert('Chúc mừng bạn đã đoán đúng!');
+        else {
+            while (count < 3) {
+                count++;
+                if (check > random) alert('Số bạn nhập lớn hơn số random!');
+                else alert('Số bạn nhập bé hơn số random!');
+                check = parseInt(prompt('Nhập số bạn đoán: '));
+            }
+            alert('Bạn đã hết số lần đoán!');
+        }
+
+
+    }
+
+</script>

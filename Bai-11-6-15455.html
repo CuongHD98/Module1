@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-15455</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let num = parseInt(prompt('Nhap so chu so tu nhien dau tien chia het cho 7: '));
+    let count = 0;
+    let T = 0;
+    for (let i = 0; i < 1000; i++) {
+            if (i % 7 == 0 && count < num){
+                document.write(i + "<br>");
+                T += i;
+                count++;
+            }
+    }
+    document.write('Tong= ' + T);
+</script>

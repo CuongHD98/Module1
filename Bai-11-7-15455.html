@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7-15455</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let count = 1;
+  while (count <= 100){
+    if (count % 3 != 0 && count % 5 != 0) document.write(count + "<br>");
+    else if (count % 3 == 0){
+            if (count % 5 == 0) document.write("FizzBuzz" + "<br>");
+            else document.write("Fizz" + "<br>");
+          } else if (count % 5 == 0) document.write("Buzz" + "<br>");
+
+    count++;
+  }
+</script>

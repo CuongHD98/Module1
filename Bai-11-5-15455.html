@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5-15455</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let f1, f2, fn, T = 2;
+  f1 = f2 = 1;
+  let n = parseInt(prompt('Ban muon tim so thu may trong day fibonaci? n=  '));
+  if (n <= 2) alert('Loi, n phai lon hon 2!');
+  else for (let i = 3; i <= n ; i++) {
+    fn = f1 + f2;
+    f1 = f2;
+    f2 = fn;
+    T += fn;
+  }
+  document.write('Tong= '+ T);
+
+</script>

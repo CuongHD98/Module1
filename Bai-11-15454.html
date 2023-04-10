@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15454</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let num = parseInt(prompt('Nhap so luong so nguyen to can in ra: '));
+  let countNT = 1;
+  let countU = 0;
+  for (let i = 2; i < 1000; i++) {
+      for (let j = 1; j <= i; j++) {
+          if (i % j == 0) countU++;
+      }
+      if (countU == 2 && countNT <= num){
+          document.write(i + "<br>");
+          countNT++;
+      }
+      countU = 0;
+  }
+</script>
