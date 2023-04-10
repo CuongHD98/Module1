@@ -9,5 +9,21 @@
 </body>
 </html>
 <script>
+    let core = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    let i, j;
+    i = j = 1;
+    while (i <= 10){
+        core = core + "<tr>";
+        while (j <= 10){
+            core = core + "<td>" + i * j + "</td>";
+            j++;
+        }
+        core = core + "</tr>";
+        j = 1;
+        i++;
+    }
+    core = core + "</table>";
+    document.write(core);
+    
 
 </script>
