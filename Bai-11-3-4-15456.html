@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-15456</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j <= i; j++) {
+      document.write("*")
+    }
+    document.write("<br>")
+  }
+
+
+  document.write("<br>");//het phan I
+
+
+  for (let k = 5; k > 0 ; k--) {
+    for (let h = 0; h < k; h++) {
+      document.write("*")
+    }
+    document.write("<br>")
+  }
+
+  document.write("<br>");//het phan II
+
+  for (let l = 5; l > 0; l--) {
+      for (let m = 0; m < l - 1; m++) {
+          document.write("&nbsp ")
+      }
+      for (let m = 0; m <= 5 - l ; m++) {
+          document.write("*")
+      }
+      document.write("<br>");
+  }
+
+  document.write("<br>");//het phan III
+
+  for (let n = 5; n > 0; n--) {
+      for (let u = 0; u < 5-n; u++) {
+          document.write("&nbsp ")
+      }
+      for (let u = 0; u < n; u++) {
+          document.write("*")
+      }
+      document.write("<br>")
+  }
+
+  document.write("<br>");//het phan IV
+
+  for (let a = 1; a <= 7; a++) {
+      document.write("*");
+      for (let b = 2; b <= 20; b++) {
+          if (a == 1 || a == 7){
+              document.write("*")
+          }else document.write("&nbsp ")
+      }
+      document.write("*");
+      document.write("<br>");
+  }
+
+  document.write("<br>");//het phan V
+
+
+
+
+
+
+
+</script>

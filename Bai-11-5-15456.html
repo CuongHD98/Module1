@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-15456</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let m = +prompt('Nhap so tien vay: ');
+    let a = +prompt('Nhap lai suat ngan hang: ');
+    let t = +prompt('Nhap so thang cho vay: ');
+    let l; //lai ngan hang phai tra
+    if (t <= 0) alert('Ban nhap sai so thang!');
+    else {
+        for (let i = 1; i <= t ; i++) {
+            l = m * a;
+            m = m + l;
+        }
+        alert('Tien lai ban phai dong sau '  + t + ' thang la: ' + l + ' VND');
+    }
+
+</script>
