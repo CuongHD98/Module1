@@ -2,45 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    button {
-      width: 100%;
-    }
-
-  </style>
+  <title>15418</title>
 </head>
 <body>
-<table>
-  <tr>
-    <td style="width: 150px"><button onclick="goodFunc()" style="width: 100px">GOOD</button></td>
-    <td id="good" style="background-color: white; width: 50px "></td>
-  </tr>
-  <tr>
-    <td style="width: 150px"><button onclick="fastFunc()" style="width: 100px">FAST</button></td>
-    <td id="fast" style="background-color: white; width: 50px "></td>
-  </tr>
-  <tr>
-    <td style="width: 150px"><button onclick="cheapFunc()" style="width: 100px">CHEAP</button></td>
-    <td id="cheap" style="background-color: white; width: 50px "></td>
-  </tr>
-</table>
-<table>
+
 </body>
 </html>
 <script>
-  let view = document.getElementById("view");
-  function inputValue(value) {
-    view.value += value;
+  let array = [1,3,2,4,6];
+  array.push(10);
+  for (let i = 3; i < array.length; i++) {
+    let a = array[i];
+    array[i] = array[array.length-1];
+    array[array.length-1] = a;
   }
-  function result() {
-    let result = eval(view.value);
-    view.value = result;
+  console.log(array);
+
+  let arr = [1,2,3,4,5];
+  let fist = 0;
+  let last = arr.length - 1;
+  while (fist < last){
+    let b = arr[fist];
+    arr[fist] = arr[last];
+    arr[last] = b;
+    fist++;
+    last--;
   }
-  function xoa() {
-    view.value="";
+  console.log(arr)
+
+  let arra = [7,3,1,5,9];
+  let min = arra[0];
+  let index = 0;
+  for (let i = 1; i < arra.length; i++) {
+    if (arra[i] < min) {
+      min = arra[i];
+      index = i + 1;
+    }
   }
+  console.log("min= " + min + " index = " + index);
 
 </script>

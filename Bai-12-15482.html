@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-15482</title>
+</head>
+<body>
+<p>Nhập từ: </p>
+<input type="text" id="translate">
+<input type="button" onclick="check()" value="Dịch">
+<p id="result"></p>
+
+</body>
+</html>
+<script>
+    function check() {
+        let english = ["apple", "banana", "orange", "pen", "pencil", "book"];
+        let vietnamese = ["táo", "chuối", "cam", "bút", "bút chì", "sách"];
+        let value = document.getElementById("translate").value;
+        let result;
+        for (let i = 0; i < english.length; i++) {
+            if (value == english[i]) {
+                result = vietnamese[i]
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+
+
+</script>
