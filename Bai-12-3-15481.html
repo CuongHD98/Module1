@@ -12,16 +12,15 @@
   let array = 'The Quick Brown Fox';
   let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let LOWER = 'abcdefghijklmnopqrstuvwxyz';
-  let result = [];
+  let a = array.split('');
+  let u = UPPER.split('');
+  let l = LOWER.split('');
 
-  for (let i = 0; i < array.length; i++) {
-    if (UPPER.indexOf(array[i]) !== -1) {
-      result.push(array[i].toLowerCase());
-    } else if (LOWER.indexOf(array[i]) !== -1) {
-      result.push(array[i].toUpperCase());
-    } else {
-      result.push(array[i]);
-    }
+  for (let i = 0; i < a.length; i++) {
+      for (let j = 0; j < u.length; j++) {
+          if (a[i] == u[j]) a[i] = l[j];
+          else if (a[i] == l[j]) a[i] = u[j]
+      }
   }
-  console.log(result.join(''));
+  console.log(a.join(""));
 </script>
