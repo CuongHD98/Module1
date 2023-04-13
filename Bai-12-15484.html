@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15484</title>
+</head>
+<body>
+<h2>Type anthing slowly</h2>
+<form>
+    <textarea id="txt" cols="40" rows="10" onkeydown="inputValue();"></textarea>
+</form>
+
+</body>
+</html>
+<script>
+    let value = "Code Gym!";
+    a = value.split('');
+    let result = "";
+
+    function inputValue() {
+        t = document.getElementById("txt").value;
+        if (t.length > 0) {
+            for (let i = 0; i < t.length; i++) {
+                result = result + a[i];
+                if (i === a.length) {
+                    document.getElementById("txt").value = "";
+                    result = "";
+                }
+            }
+        }
+        document.getElementById("txt").value = result;
+        result = "";
+        setTimeout("inputValue()", 1);
+        //return false;
+    }
+</script>
+
+
+
+
+
+
+
