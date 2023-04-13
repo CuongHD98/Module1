@@ -26,10 +26,10 @@
     c.innerHTML = display;
 
     function changeValue() {
-        let positionX = prompt("X: ");
-        let positionY = prompt("Y: ");
+        let x = prompt("X: ");
+        let y = prompt("Y: ");
         display = "";
-        array[positionX][positionY] = "x";
+        array[x][y] = "x";
         for (let i = 0; i < 5; i++) {
             display += "<br/>";
             for (let j = 0; j < 5; j++) {

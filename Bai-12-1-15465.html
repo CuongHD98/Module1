@@ -15,13 +15,15 @@
 <script>
     let x = 0;
     let array = Array();
-    function add_array(){
+
+    function add_array() {
         array[x] = document.getElementById("text").value;
         alert("Add " + array[x] + " to array");
         x++;
         document.getElementById("text").value = "";
     }
-    function display_array(){
+
+    function display_array() {
         let e = "<hr>";
         for (let i = 0; i < array.length; i++) {
             e += "Element " + i + " = " + array[i] + "<br>";
