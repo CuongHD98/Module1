@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15499</title>
+</head>
+<body>
+<h3>Change F to C</h3>
+<p>Fahrenheit <input type="number" id="input" oninput="changeFC(this.value)" onchange="changeFC(this.value)"></p>
+<p>Celcius: <span id="result"></span></p>
+
+</body>
+</html>
+<script>
+  function changeFC(f) {
+    f = parseFloat(f);
+    let c = (f - 32) / 1.8;
+    document.getElementById("result").innerHTML = c;
+  }
+
+
+</script>

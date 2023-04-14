@@ -2,40 +2,25 @@
 <html lang="en">
 
 <body>
-<h3>Caro Game Simple</h3>
-<p id="carogame"></p>
-<input type="button" value="Change Value" onclick="changeValue()">
+
 </body>
 
 </html>
 <script>
+    let num = window.prompt().split(',',10);
+    num.sort(function(a, b) {
+        return a - b
+    })
+    // xep tang dan
+    console.log(num)
 
-    let c = document.getElementById("carogame");
-    let array = [];
-    let display = "";
-    for (let i = 0; i < 5; i++) {
-        array[i] = [0, 0, 0, 0, 0];
-    }
 
-    for (let i = 0; i < 5; i++) {
-        for (let j = 0; j < 5; j++) {
-            display += array[i][j] + "&nbsp;&nbsp;";
-        }
-        display += "<br/>";
-    }
-    c.innerHTML = display;
+    num.sort(function(a, b) {
+        return b - a
+    })
+    // // xep giam dan
 
-    function changeValue() {
-        let positionX = prompt("X: ");
-        let positionY = prompt("Y: ");
-        display = "";
-        array[positionX][positionY] = "x";
-        for (let i = 0; i < 5; i++) {
-            display += "<br/>";
-            for (let j = 0; j < 5; j++) {
-                display += array[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
-            }
-        }
-        c.innerHTML = "<hr/>" + display;
-    }
+    console.log(num);
+
+
 </script>
