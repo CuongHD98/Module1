@@ -11,15 +11,24 @@
 <script>
     function isPalindrome(str) {
         let check;
-        if (str.charAt(0) !== str.charAt(str.length - 1)) check = false;
+        let strFirst = str.charAt(0);
+        let strLast = str.charAt(str.length - 1);
+        if (str.length == 0 || str.length == 1) check = true;
+        else if (str.length == 2 || str.length == 3) {
+            if (strFirst == strLast) check = true;
+            else check = false;
+        } else if (strFirst != strLast) check = false;
         else {
             check = true;
-            str = str.substring(1, str.length - 1)
+            str = str.substring(1, str.length - 1);
             isPalindrome(str);
         }
-        return console.log(check)
+        return console.log(check);
     }
-    isPalindrome("redder")
+
+    isPalindrome("abccba");
+
+
 
 
 
