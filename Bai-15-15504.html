@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15504</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //bai 1
+    function square(a) {
+        return a*a;
+    }
+    console.log(square(5));
+
+    //bai 2
+    function sCircle(r) {
+        return r*r*Math.PI;
+    }
+    console.log(sCircle(5));
+    function pCircle(r) {
+        return 2*r*Math.PI;
+    }
+    console.log(pCircle(5));
+
+    //bai 3
+    function factorial(num) {
+        let result = 1;
+        if (num < 0) return "Input wrong!";
+        else if (num == 0) return 1;
+        else {
+            for (let i = 1; i <= num; i++) {
+                result *= i;
+            }
+            return result;
+        }
+    }
+    console.log(factorial(6))
+
+    //bai 4
+    let num = [0,1,2,3,4,5,6,7,8,9];
+    function checkString(str) {
+        let check = false;
+        for (let i = 0; i < num.length; i++) {
+            if (str == num[i]){
+                check = true;
+                break;
+            }
+        }
+        return check;
+    }
+    console.log(checkString('%'))
+
+    //bai 5
+    function findMin(a,b,c) {
+        let min = a;
+        if (min > b) {
+            min = b;
+            if (min > c) min = c;
+        }else if (min > c) min = c;
+        return min;
+    }
+    console.log(findMin(12,34,4))
+
+    //bai 6
+    function positiveIntegers(num) {
+        let check = false;
+        if (num > 0) check = true;
+        return check;
+    }
+    console.log(positiveIntegers(45))
+
+    //bai 7
+    function swap(a,b) {
+        let t = a;
+        a = b;
+        b = t;
+        return a + "," + b;
+    }
+    console.log(swap(4,3))
+
+    //bai 8
+    function swapArray(arr) {
+        for (let i = 0; i < arr.length / 2; i++) {
+            let x = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = x;
+        }
+        return arr;
+    }
+    console.log(swapArray([2,3,4,5,6,65,14,89]))
+
+    //bai 9
+    function checkStrInArr(str, arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (str == arr[i]) count++;
+        }
+        if (count > 0) return count;
+        else return -1;
+
+    }
+    console.log(checkStrInArr('a', ['a', 'b', 'a', 'c', 'd', 'e', 'a','a']))
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15501</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  //Ham check so nguyen to
+  function isPrime(number) {
+    let check = true;
+    for (let i = 2; i < number; i++) {
+      if (number % i == 0) {
+        check = false;
+        break;
+      }
+    }
+    return check;
+  }
+
+  // Hien thi so nguyen to duoi 100
+  for (let i = 2; i < 100; i++) {
+    let check = isPrime(i);
+    if (check) document.write(i + ",")
+  }
+</script>

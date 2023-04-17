@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15503</title>
+</head>
+<body>
+<!--Bai 1-->
+<button onclick="alertMessage()">Bai1!</button>
+<!--Bai 2-->
+<button onclick="numPlus(5)">Bai2!</button>
+<!--Bai 3-->
+<button onclick="twoNum(5,4)">Bai3!</button>
+<!--Bai 4-->
+<!--Bai 5-->
+<button onclick="checkStar(star,arrStar)">Bai5!</button>
+
+</body>
+</html>
+<script>
+    //Bai 1
+    function alertMessage() {
+        alert("Xin chao!")
+    }
+
+    //Bai 2
+    function numPlus(num) {
+        num++
+        console.log(num)
+    }
+
+    //Bai 3
+    function twoNum(a,b) {
+        if (a > b) alert("a lon hon b!")
+        else return alert(a + b);
+    }
+
+    //Bai 4
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+    result = 0;
+    alert(result);
+    result = addNumbers();
+    alert(result);
+
+    //Bai 5
+    let star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let arrStar = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    function checkStar(arr1,arr2) {
+        let text = prompt("Enter name's star: ");
+        let check = true;
+        let index;
+        for (let i = 0; i < arr1.length; i++) {
+            if (text == arr1[i]) {
+                check = true;
+                index = i;
+                break;
+            } else {
+                check = false;
+            }
+        }
+        if (check) alert(arr2[index]);
+        else alert("Name's star is worng!")
+    }
+
+
+
+
+
+</script>

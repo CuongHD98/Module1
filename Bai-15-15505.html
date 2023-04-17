@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15505</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" id="text" placeholder="New Product">
+<input type="button" value="Add" onclick="add()">
+<h3>Display All Product</h3>
+<table id="display">
+
+</table>
+</body>
+</html>
+<script>
+    let display = document.getElementById("display")
+    let arr = ['Sony', 'Samsung', 'Nokia', 'Xiaomi Redmi','Apple Iphone'];
+
+
+    function display1() {
+        display.innerHTML = "";
+        display.innerHTML += "<tr>" + "<th>" + "Product Name" + "</th>"
+            + "<th>" + "</th>"
+            + "<th>" + "</th>"
+            + "<th>" + arr.length + "products" + "</th>" + "</tr>";
+        for (let i = 0; i < arr.length; i++) {
+            display.innerHTML = display.innerHTML + "<tr>" + "<td>" + arr[i] + "</td>"
+                + "<td>" + "<input type='button' value='Edit' id='edit' onclick='edit("+i+")'>" + "</td>"
+                + "<td>" + "<input type='button' value='Delete' id='delete' onclick='del()'>" + "</td>"
+                + "<td>" + "</td>" + "</tr>";
+        }
+
+    }
+    display1();
+    function add() {
+        if (document.getElementById("text").value != "") {
+            arr.push(document.getElementById("text").value);
+            display1();
+            document.getElementById("text").value = "";
+        }
+    }
+
+    function edit(index) {
+        let text = prompt("Edit text: ");
+        arr[index] = text;
+        display1();
+    }
+
+    function del(index) {
+        arr.splice(index,1);
+        display1();
+    }
+
+</script>
