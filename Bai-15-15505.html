@@ -44,7 +44,7 @@
 
     function edit(index) {
         let text = prompt("Edit text: ");
-        arr[index] = text;
+        if (text !== "") arr[index] = text;
         display1();
     }
 

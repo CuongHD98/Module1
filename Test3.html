@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>JQuery assignment 3</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="jquery assignment 3 puzzle">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="Adam Shechter">
-    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <script type="text/javascript" src="./js/jquery-1.12.2.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <title>$Title$</title>
+    <style>
+        td {
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
-<p>Nhập từ: </p>
-<input type="text" name="" id="string">
-<button onclick="translate()">Dịch</button>
-<p id="result"></p>
+<h1>Danh sách người yêu học viên</h1>
+<button onclick="themNY()">Thêm người yêu</button>
+<input placeholder="Nhập tên" id="name">
+<input placeholder="nhập tuổi" id="age">
+<input placeholder="nhập ảnh" id="img">
+<table id="display">
 
+</table>
 </body>
 </html>
+
+
 <script>
-    function translate() {
-        //orange
-        let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
-        let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
-        let string = document.getElementById("string").value;
-        let index_eng = 0;
-        let result;
-        for (let i = 0; i < arr_eng.length; i++) {
-            if (string == arr_eng[i]) {
-                index_eng = i;
-                for (let j = 0; j < arr_vie.length; j++) {
-                    if (index_eng == j) {
-                        result = arr_vie[j];
-                    }
-                }
-            }
+    let arr = [
+        ["Ny Toàn", 19, "https://tinhayvip.com/wp-content/uploads/2022/06/vsbg-5.jpg"],
+        ["Ny Khanh", 19, "https://biztime.com.vn/upload/photos/2019/05/xtNWdVWaVDGDPuH7IN1n_31_c8c20cf5237587dd4a00ad1a72b494f8_image.jpg"],
+        ["Ny Tùng", 19, "https://openseauserdata.com/files/02d992a4c7039936aea0bce0ec7a5e1e.jpg"]
+    ]
+
+    hienthiNY();
+
+    function hienthiNY() {
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            str += "<tr>" +
+                "        <td>" + arr[i][0] + "</td>" +
+                "        <td>" + arr[i][1] + "</td>" +
+                "        <td><img src='" + arr[i][2] + "' width='150' height='200'></td>" +
+                "        <td><button onclick='chiaTay(" + i + ")'>Delete</button></td>" +
+                "    </tr>"
         }
-        document.getElementById("result").innerHTML = result;
+        document.getElementById("display").innerHTML = str;
     }
 
+    function themNY() {
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let img = document.getElementById("img").value;
+        let arr2 = [name, age, img];
+        arr.push(arr2);
+        console.log(arr)
+        hienthiNY();
+    }
+
+    function chiaTay(index) {
+        arr.splice(index, 1);
+        hienthiNY();
+    }
 </script>

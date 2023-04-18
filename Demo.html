@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  // //Bai 1
+  // let arr = [1, 2, 4, 6, 7, 9, 9];
+  // let ind = arr.length;
+  // function findMax3() {
+  //   let max = arr[0];
+  //   let index = 0;
+  //   let newArr = [];
+  //   if (arr.length == ind -2) return max;
+  //   else {
+  //     for (let i = 0; i < arr.length; i++) {
+  //       if (arr[i] > max) {
+  //         max = arr[i];
+  //         index = i;
+  //       }
+  //     }
+  //     for (let i = 0; i < arr.length; i++) {
+  //       if (i != index) newArr.push(arr[i])
+  //     }
+  //     arr = newArr
+  //     return findMax3(arr)
+  //   }
+  // }
+  // console.log(findMax3(arr))
+  //
+  //
+  //
+  // //Bai 2
+  //
+  // let array = ['a',2,'b',4,5,6,7,8];
+  // let index = 3;
+  // function tryRemoveFromArray(array,index) {
+  //   if (index < 0 || index > array.length - 1) return array;
+  //   else {
+  //     let newArr = [];
+  //     for (let i = 0; i < array.length; i++) {
+  //       if (i != index) newArr.push(array[i]);
+  //     }
+  //     return array = newArr;
+  //   }
+  // }
+  // console.log(tryRemoveFromArray(array,index))
+  //
+  // //Bai 3
+  // let arr1 = "abc".split('');
+  // let arr2 = "abcadef".split('');
+  //
+  // function checkStr(arr1, arr2) {
+  //   let check = false;
+  //     for (let i = 0; i < arr2.length; i++) {
+  //         if (arr1[0] === arr2[i]){
+  //             let count = 1;
+  //             for (let j = 1; j < arr1.length; j++) {
+  //                 if (arr1[j] === arr2[i+j]) count++;
+  //             }
+  //             if (count === arr1.length) check = true;
+  //         }
+  //     }
+  //   return check;
+  // }
+  // console.log(checkStr(arr1,arr2));
+
+
+
+
+
+  // let arrr = [7,6,2,10,1];
+  // let index = 2;
+  // let newArrr = new Array(arrr.length-1);
+  // for (let i = 0; i < newArrr; i++) {
+  //     if (i < index) newArrr[i] = arrr[i];
+  //     else newArrr[i] = arrr[i+1];
+  // }
+  // console.log(newArrr)
+
+  function trunglap(arr,element) {
+      let newArr = new Array(0) ;
+      for (let i = 0; i < arr.length; i++) {
+          if (arr[i] !== element) newArr[newArr.length] = arr[i];
+      }
+      return newArr;
+  }
+
+  let arr = [1,2,3,4,2,5,6,7];
+  console.log(trunglap(arr,2));
+
+
+
+
+
+
+
+
+</script>
