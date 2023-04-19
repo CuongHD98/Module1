@@ -28,7 +28,7 @@
         for (let i = 0; i < arr.length; i++) {
             display.innerHTML = display.innerHTML + "<tr>" + "<td>" + arr[i] + "</td>"
                 + "<td>" + "<input type='button' value='Edit' id='edit' onclick='edit("+i+")'>" + "</td>"
-                + "<td>" + "<input type='button' value='Delete' id='delete' onclick='del()'>" + "</td>"
+                + "<td>" + "<input type='button' value='Delete' id='delete' onclick='del("+i+")'>" + "</td>"
                 + "<td>" + "</td>" + "</tr>";
         }
 

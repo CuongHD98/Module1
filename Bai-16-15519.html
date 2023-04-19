@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15519</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1400px" height="700px" style="border: 1px solid #d3d3d3;"></canvas>
+
+</body>
+</html>
+<script>
+    let Rectangle = function (length, width) {
+        this.length = length;
+        this.width = width;
+        this.getAreas = function () {
+            return this.length * this.width;
+        }
+        this.getAreap = function () {
+            return 2 * (this.length + this.width);
+        }
+    }
+    function createRectangle(){
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        let length = 400;
+        let width =200;
+        let rectangle = new Rectangle(length,width);
+        ctx.beginPath();
+        ctx.moveTo(100,100);
+        ctx.lineTo(100+rectangle.length,100);
+        ctx.lineTo(100+rectangle.length,100+rectangle.width);
+        ctx.lineTo(100,100+rectangle.width);
+        ctx.lineTo(100,100);
+        ctx.stroke();
+
+    }
+    let rectangle = new Rectangle(400,200);
+    alert(rectangle.getAreap());
+    alert(rectangle.getAreas());
+    createRectangle()
+
+
+
+</script>

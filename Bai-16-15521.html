@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let Moblie = function (battery, memoryArea1, memoryArea2, memoryArea3) {
+        this.battery = battery;
+        this.memoryArea1 = memoryArea1;
+        this.memoryArea2 = memoryArea2;
+        this.memoryArea3 = memoryArea3;
+
+        this.checkStatusOnOff = function () {
+            if (this.battery > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        this.turnOn = function () {
+            alert("PhoneIsOn");
+        };
+
+        this.turnOf = function () {
+            alert("PhoneIsOff");
+        };
+
+        this.charge = function () {
+            alert("Sac Pin" + this.battery++);
+        };
+
+        this.writeMessage = function () {
+            let text = prompt("This is a messenger: ");
+            this.memoryArea1.push(text);
+        };
+
+        this.sendMessage = function () {
+            alert("Messenger sent!");
+            this.memoryArea2.push(this.memoryArea1[this.memoryArea1.length - 1]);
+            this.memoryArea1.pop();
+
+        };
+        this.receiveMessage = function (message) {
+            alert("Message received!");
+            this.memoryArea3.push(message);
+        }
+
+        this.seenSentMessage = function () {
+            document.write(this.memoryArea2[this.memoryArea2.length - 1]);
+        }
+        this.seenReceiveMessage = function () {
+            document.write(this.memoryArea3[this.memoryArea3.length - 1]);
+        }
+        this.afterUse = function () {
+            alert("Each time using the function :" + this.battery--);
+        }
+
+    };
+    let nokia = new Moblie(10, [], [], []);
+    let iphone = new Moblie(20, [], [], []);
+
+    nokia.checkStatusOnOff();
+    nokia.turnOn();
+    nokia.writeMessage();
+    nokia.sendMessage();
+
+    iphone.checkStatusOnOff();
+    iphone.turnOn();
+    iphone.receiveMessage(nokia.memoryArea2[nokia.memoryArea2.length - 1]);
+    iphone.seenReceiveMessage();
+
+</script>
