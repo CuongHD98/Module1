@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15535</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Mouse {
+        name;
+        weight;
+        speed;
+        status;
+
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = Boolean(status);
+        }
+
+        call() {
+            alert("chit chit (>.<)");
+        }
+    }
+
+    class Cat {
+        name;
+        weight;
+        maxSpeed;
+
+        constructor(name, weight, maxSpeed) {
+            this.name = name;
+            this.weight = weight;
+            this.maxSpeed = maxSpeed;
+        }
+
+        call() {
+            alert("Meo Meo :))");
+        }
+
+        catchMouse() {
+            alert("Bat duoc roi!");
+        }
+
+        eatMouse() {
+            alert("An thoi!");
+        }
+    }
+
+    let mouse = new Mouse("jerry", 1, 10, true);
+    let cat = new Cat("tom", 6, 15);
+
+    if (mouse.status || cat.maxSpeed > mouse.speed) {
+        mouse.call();
+        cat.call();
+        cat.catchMouse();
+        cat.eatMouse();
+        cat.weight = cat.weight + mouse.weight;
+    } else alert("Holy shit!");
+
+
+</script>

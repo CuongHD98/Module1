@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15536</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Remote {
+        code;
+
+        constructor(code) {
+            this.code = code;
+        }
+
+        changeChannel1() {
+            alert("Channel + 1");
+        }
+
+        changeChannel2() {
+            alert("Channel - 1");
+        }
+
+        changeVolume1() {
+            alert("Volume + 1");
+        }
+
+        changeVolume2() {
+            alert("Volume - 1");
+        }
+
+        turnOn() {
+            return true;
+        }
+
+        turnOff() {
+            return false;
+        }
+
+    }
+
+    class TiVi {
+        channel;
+        volume;
+        status;
+        remote;
+
+        constructor(channel, volume, status) {
+            this.channel = channel;
+            this.volume = volume;
+            this.status = status;
+        }
+
+        connectToRemote(Remote) {
+            this.remote = Remote;
+        }
+
+        changeChannel1() {
+            this.channel++;
+            return this.remote.changeChannel1();
+        }
+
+        changeChannel2() {
+            this.channel--;
+            return this.remote.changeChannel2();
+        }
+
+        changeVolume1() {
+            this.volume++;
+            return this.remote.changeVolume1();
+        }
+
+        changeVolume2() {
+            this.volume--;
+            return this.remote.changeVolume2();
+        }
+
+
+    }
+
+    let tv = new TiVi(7, 50, false);
+    let rm = new Remote();
+
+    tv.connectToRemote(rm);
+    tv.status = rm.turnOn(); //bat TV
+    console.log(tv.channel);
+
+    tv.changeChannel2(); // chuyen den kenh 6
+    tv.changeChannel2(); // chuyen den kenh 5
+    tv.changeChannel2(); // chuyen den kenh 4
+    tv.changeChannel2(); // chuyen den kenh 3
+
+    tv.changeVolume1(); // tang am luong 1 dv
+    tv.changeVolume1(); // tang am luong 2 dv
+
+    tv.status = rm.turnOff(); //tat TV
+
+
+</script>

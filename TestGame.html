@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1400px" height="700px" style="border: 2px solid #000"></canvas>
+
+
+
+
+</body>
+</html>
+<script>
+    class createCar {
+        // length;
+        // width;
+        // radius;
+        //
+        // constructor(length, width, radius) {
+        //     this.length = length;
+        //     this.width = width;
+        //     this.radius = radius;
+        // }
+
+        rectangle = function (x, y, length, width) {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.fillRect(x, y, length, width);
+            ctx.stroke();
+        }
+
+        circle1 = function (x, y, length, width, radius) {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.arc(x, y + width + radius, radius, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+
+
+        circle2 = function (x, y, length, width, radius) {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.arc(x + length, y + width + radius, radius, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+    }
+
+    let newCar = new createCar();
+    newCar.rectangle(100, 100, 100, 50);
+    newCar.circle1(100, 100, 100, 50, 20);
+    newCar.circle2(100, 100, 100, 50, 20);
+    //
+    // let size = 30;
+    // ctx.fillStyle = 'blue';
+    //
+    // for (let x = 0; x < canvas.width; x += size) {
+    //     ctx.fillRect(x, 50, size, size);
+    // }
+
+
+
+    // let canvas = document.getElementById("myCanvas");
+    // let ctx = canvas.getContext("2d");
+    // const size = 30;
+    // ctx.fillStyle = 'blue';
+    //
+    // let x = 0;
+    // const id = setInterval(() => {
+    //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //     ctx.fillRect(x, 50, size, size);
+    //     x += size;
+    //
+    //     if (x >= canvas.width) {
+    //         clearInterval(id);
+    //     }
+    // }, 200);
+
+    // let imageObj = new Image();
+    // imageObj.onload = function (){
+    //     ctx.drawImage(imageObj,69,50);
+    // };
+    // imageObj.src = "https://www.kindpng.com/picc/m/7-78945_car-cartoon-icon-png-transparent-png.png";
+
+
+
+
+</script>
