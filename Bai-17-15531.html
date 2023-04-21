@@ -5,9 +5,66 @@
     <title>15531</title>
 </head>
 <body>
+<canvas id="canvas" width="1000px" height="700px" style="border: 2px solid #000000"></canvas>
 
 </body>
 </html>
 <script>
+    let canvas = document.getElementById("canvas");
+    let ctx = canvas.getContext("2d");
+    let img = new Image();
+    img.src = "https://cdn.pixabay.com/photo/2016/02/10/20/13/rainbow-button-1192443_960_720.png";
+
+    class DrawImage {
+        constructor(x, y, image) {
+            this.x = x;
+            this.y = y;
+            this.image = image;
+            // this.speed = Math.random() * 3 + 1;
+        }
+
+        draw = function () {
+            ctx.drawImage(this.image, this.x, this.y, 100, 100);
+        }
+
+        right() {
+            this.x += 2;
+        }
+
+        left() {
+            this.x -= 2;
+        }
+
+        up() {
+            this.y -= 2;
+        }
+
+        down() {
+            this.y += 2;
+        }
+
+
+    }
+
+    function clear() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    let image = new DrawImage(50, 50, img);
+    image.draw();
+
+    setInterval(moveRight, 5);
+    clear();
+
+    function moveRight() {
+        clear();
+        image.draw();
+        image.right();
+        if (image.x === canvas.width - 50){
+            image.x = 50;
+            image.y += 50;
+        }
+    }
+
 
 </script>
